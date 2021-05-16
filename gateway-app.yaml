@@ -17,4 +17,3 @@ spring:
               - Path=/rendezvous/**
           filters:
               - RewritePath=/rendezvous(?<segment>/?.*), $\{segment}
-

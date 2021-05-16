@@ -11,4 +11,3 @@ spring:
     url: r2dbc:mariadb://localhost:7701/prescription-db
     username: prescription-user
     password: prescription-pwd-01
-

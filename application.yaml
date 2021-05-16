@@ -4,11 +4,9 @@ spring:
     admin:
       client:
         url: http://localhost:7900
-  
 
 server:
   forward-headers-strategy: native
-
 
 management:
   endpoints:
