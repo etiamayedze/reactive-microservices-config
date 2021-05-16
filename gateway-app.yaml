@@ -5,16 +5,16 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: lessonModule
+        - id: prescriptionModule
           uri: http://localhost:7100/
           predicates:
-              - Path=/lessons/**
+              - Path=/prescription/**
           filters:
-              - RewritePath=/lessons(?<segment>/?.*), $\{segment}
-        - id: notationModule
+              - RewritePath=/prescription(?<segment>/?.*), $\{segment}
+        - id: rendezvousModule
           uri: http://localhost:7200/
           predicates:
-              - Path=/notations/**
+              - Path=/rendezvous/**
           filters:
-              - RewritePath=/notations(?<segment>/?.*), $\{segment}
+              - RewritePath=/rendezvous(?<segment>/?.*), $\{segment}
 

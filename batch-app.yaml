@@ -5,21 +5,21 @@ spring:
     activate:
       on-profile: local
   datasource:
-    jdbc-url: jdbc:mariadb://localhost:7701/lessons-db
-    username: lessons-user
-    password: lessons-pwd-01
+    jdbc-url: jdbc:mariadb://localhost:7701/prescription-db
+    username: prescription-user
+    password: prescription-pwd-01
     driver-class-name: org.mariadb.jdbc.Driver
 
 datasource:
-  lessons:
-    jdbc-url: jdbc:mariadb://localhost:7701/lessons-db
-    username: lessons-user
-    password: lessons-pwd-01
+  prescription:
+    jdbc-url: jdbc:mariadb://localhost:7701/prescription-db
+    username: prescription-user
+    password: prescription-pwd-01
     liquibase:
-      change-log: classpath:/db/changelog/db.lessons.changelog-master.yaml
-  notations:
-    jdbc-url: jdbc:mariadb://localhost:7702/notations-db
-    username: notations-user
-    password: notations-pwd-01
+      change-log: classpath:/db/changelog/db.prescription.changelog-master.yaml
+  rendezvous:
+    jdbc-url: jdbc:mariadb://localhost:7702/rendezvous-db
+    username: rendezvous-user
+    password: rendezvous-pwd-01
     liquibase:
-      change-log: classpath:/db/changelog/db.notations.changelog-master.yaml
+      change-log: classpath:/db/changelog/db.rendezvous.changelog-master.yaml

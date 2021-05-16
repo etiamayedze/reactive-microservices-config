@@ -1,0 +1,14 @@
+server:
+  port: 7200
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  r2dbc:
+    url: r2dbc:mariadb://localhost:7702/rendezvous-db
+    username: rendezvous-user
+    password: rendezvous-pwd-01
+

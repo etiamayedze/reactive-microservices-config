@@ -1,0 +1,14 @@
+server:
+  port: 7100
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  r2dbc: 
+    url: r2dbc:mariadb://localhost:7701/prescription-db
+    username: prescription-user
+    password: prescription-pwd-01
+
