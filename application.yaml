@@ -12,8 +12,10 @@ spring:
         jwt:
           issuer-uri: ${ISSUER_ENDPOINT}
 
+
 server:
   forward-headers-strategy: native
+
 
 management:
   endpoints:
