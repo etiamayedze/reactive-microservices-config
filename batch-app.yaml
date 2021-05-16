@@ -1,0 +1,25 @@
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    jdbc-url: jdbc:mariadb://localhost:7701/prescription-db
+    username: prescription-user
+    password: prescription-pwd-01
+    driver-class-name: org.mariadb.jdbc.Driver
+
+datasource:
+  prescription:
+    jdbc-url: jdbc:mariadb://localhost:7701/prescription-db
+    username: prescription-user
+    password: prescription-pwd-01
+    liquibase:
+      change-log: classpath:/db/changelog/db.prescription.changelog-master.yaml
+  rendezvous:
+    jdbc-url: jdbc:mariadb://localhost:7702/rendezvous-db
+    username: rendezvous-user
+    password: rendezvous-pwd-01
+    liquibase:
+      change-log: classpath:/db/changelog/db.rendezvous.changelog-master.yaml
